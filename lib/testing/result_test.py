@@ -26,17 +26,17 @@ class TestResults:
         assert isinstance(result_1.score, int)
 
         # comment out the next three lines if using Exceptions
-        result_1.score = 5000
-        assert result_1.score == 2000
-        assert isinstance(result_1.score, int)
+        # result_1.score = 5000
+        # assert result_1.score == 2000
+        # assert isinstance(result_1.score, int)
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Result(player, game, "500")
+        with pytest.raises(Exception):
+            Result(player, game, "500")
 
         # uncomment the next two lines if using Exceptions
-        # with pytest.raises(Exception):
-        #     Result(player, game, 400.99)
+        with pytest.raises(Exception):
+            Result(player, game, 400.99)
 
     def test_score_is_valid(self):
         """score is between 1 and 5000 inclusive"""
